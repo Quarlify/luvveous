@@ -30,14 +30,25 @@ if (!playerNickname) {
         playerNickname = nicknameInput.value;
         localStorage.setItem("playerNickname", playerNickname);
         nicknameModal.style.display = "none"; // Hide the modal
+
+        // Update the nickname in the HTML
+        const nicknameElement = document.getElementById("player-nickname");
+        nicknameElement.textContent = playerNickname;
+
         initializeGame(); // Start the game
     });
 } else {
     // Hide the modal if the nickname is already set
     const nicknameModal = document.getElementById("nickname-modal");
     nicknameModal.style.display = "none";
+
+    // Update the nickname in the HTML
+    const nicknameElement = document.getElementById("player-nickname");
+    nicknameElement.textContent = playerNickname;
+
     initializeGame();
 }
+
 // Track the current judge (player 1 or player 2)
 let currentJudge = 1;
 

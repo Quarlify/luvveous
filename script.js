@@ -14,6 +14,14 @@ const whiteCardOptions = [
 let player1Score = 0;
 let player2Score = 0;
 
+// Initialize player nickname
+let playerNickname = localStorage.getItem("playerNickname");
+
+if (!playerNickname) {
+    playerNickname = prompt("Please enter your nickname:");
+    localStorage.setItem("playerNickname", playerNickname);
+}
+
 // Track the current judge (player 1 or player 2)
 let currentJudge = 1;
 
@@ -44,6 +52,12 @@ function initializeGame() {
 // Function to choose a white card
 function chooseWhiteCard(index) {
     // Implement the logic for a player choosing a card
+
+    // Update the player's nickname in the chosen card for display
+    const selectedCard = whiteCardOptions[index];
+    const formattedCard = `${playerNickname} chose: ${selectedCard}`;
+
+    // Implement the logic to send this choice to other players if you have a multiplayer setup
 }
 
 // Function to judge the round

@@ -18,8 +18,22 @@ let player2Score = 0;
 let playerNickname = localStorage.getItem("playerNickname");
 
 if (!playerNickname) {
-    playerNickname = prompt("Please enter your nickname:");
-    localStorage.setItem("playerNickname", playerNickname);
+    // Display the nickname modal if the nickname is not set
+    const nicknameModal = document.getElementById("nickname-modal");
+    nicknameModal.style.display = "block";
+
+    // Handle the nickname submission
+    const nicknameInput = document.getElementById("nickname-input");
+    const nicknameSubmit = document.getElementById("nickname-submit");
+
+    nicknameSubmit.addEventListener("click", () => {
+        playerNickname = nicknameInput.value;
+        localStorage.setItem("playerNickname", playerNickname);
+        nicknameModal.style.display = "none"; // Hide the modal
+        initializeGame(); // Start the game
+    });
+} else {
+    initializeGame();
 }
 
 // Track the current judge (player 1 or player 2)

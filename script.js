@@ -27,6 +27,10 @@ let currentJudge = 1;
 
 // Initialize the game
 function initializeGame() {
+    // Display the player's nickname
+    const nicknameElement = document.getElementById("player-nickname");
+    nicknameElement.textContent = playerNickname;
+
     document.getElementById("black-card").innerHTML = `<h1>${blackCard}</h1>`;
     document.getElementById("white-cards").innerHTML = "";
 

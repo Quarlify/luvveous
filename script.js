@@ -1,13 +1,13 @@
 // Define the black card and white card options
-const blackCard = "Walking down the street Jack was glad seeing the __";
+const blackCard = "Лучший подарок на день рождения это __";
 const whiteCardOptions = [
-    "a talking cat",
-    "a dancing penguin",
-    "a flying elephant",
-    "a singing banana",
-    "a laughing giraffe",
-    "an invisible unicorn",
-    "a surfing kangaroo",
+    "Холокост",
+    "Сметана",
+    "Гитлер",
+    "24 абрикоса",
+    "бан на твиче",
+    "невидимые деньги",
+    "порватые штаны",
 ];
 
 // Player scores

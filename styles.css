@@ -1,51 +1,36 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-}
-
-#game-container {
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-#black-card {
-    text-align: center;
-    background-color: #000;
-    color: #fff;
-    padding: 10px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-}
-
-#white-cards {
+/* Modal container */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
 }
 
-.white-card {
+/* Modal content */
+.modal-content {
     background-color: #fff;
-    border: 1px solid #ccc;
     border-radius: 5px;
-    padding: 10px;
-    margin: 5px;
-    cursor: pointer;
-    width: calc(33.33% - 10px);
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-.white-card:hover {
-    background-color: #f0f0f0;
+/* Input and Submit Button in Modal */
+#nickname-input {
+    width: 100%;
+    margin: 10px 0;
 }
 
-#scoreboard {
-    margin: 20px 0;
-}
-
-button#judge-button {
+/* Centered Submit Button */
+#nickname-submit {
+    margin: 10px auto;
+    display: block;
     background-color: #000;
     color: #fff;
     padding: 10px 20px;

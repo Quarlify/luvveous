@@ -33,9 +33,11 @@ if (!playerNickname) {
         initializeGame(); // Start the game
     });
 } else {
+    // Hide the modal if the nickname is already set
+    const nicknameModal = document.getElementById("nickname-modal");
+    nicknameModal.style.display = "none";
     initializeGame();
 }
-
 // Track the current judge (player 1 or player 2)
 let currentJudge = 1;
 
